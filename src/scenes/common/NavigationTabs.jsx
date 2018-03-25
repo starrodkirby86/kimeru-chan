@@ -41,11 +41,11 @@ function NavigationTabs(props) {
   ));
 
   return (
-    <Tabs isSize="large">
-      <TabList>
-        {tabComponents}
-      </TabList>
-    </Tabs>
+      <Tabs isSize="large">
+        <TabList isAlign="right">
+          {tabComponents}
+        </TabList>
+      </Tabs>
   );
 }
 
