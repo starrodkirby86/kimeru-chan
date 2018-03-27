@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "animejs": "^2.2.0",
-    "bloomer": "^0.6.3",
-    "bulma": "^0.6.2",
     "lodash": "^4.17.5",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -14,7 +12,9 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-transition-group": "^2.2.1",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0"
   },
   "scripts": {
     "start": "react-scripts start",

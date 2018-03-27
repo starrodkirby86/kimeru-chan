@@ -10,8 +10,10 @@ const IDEA_ADD = 'ideas/IDEA_ADD';
 const IDEA_UPDATE = 'ideas/IDEA_UPDATE';
 const IDEA_REMOVE = 'ideas/IDEA_REMOVE';
 
+// TODO: Replace IDEAS_GET with loading from a file (populate the store in file opening).
+
 // Reducer
-export default function reducer(state = {}, action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case IDEAS_GET:
       return state; // TODO: Implement.

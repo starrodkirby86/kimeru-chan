@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, Label, Control, Input } from 'bloomer';
+import { Form } from 'semantic-ui-react';
 
 class CreateForm extends React.Component {
   state = {
@@ -12,12 +12,10 @@ class CreateForm extends React.Component {
     const { ideaText } = this.state;
 
     return (
-      <Field>
-        <Label isSize="large">Idea</Label>
-        <Control>
-          <Input type="text" placeholder="New Idea..." value={ideaText} onChange={this.handleIdeaTextChange} />
-        </Control>
-      </Field>
+      <Form>
+        <label>Idea</label>
+        <Form.Input type="text" placeholder="New Idea..." value={ideaText} onChange={this.handleIdeaTextChange} />
+      </Form>
     );
   }
 }

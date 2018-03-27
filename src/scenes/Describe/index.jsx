@@ -1,11 +1,11 @@
 import React from 'react';
-import { Notification } from 'bloomer';
+import { Message } from 'semantic-ui-react';
 
 function Describe() {
   return (
-    <Notification>
+    <Message positive>
       Anime girls are always an attraction.
-    </Notification>
+    </Message>
   );
 }
 

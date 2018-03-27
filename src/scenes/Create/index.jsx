@@ -1,13 +1,13 @@
 import React from 'react';
-import { Notification } from 'bloomer';
+import { Message } from 'semantic-ui-react';
 import CreateForm from './components/CreateForm';
 
 function Create() {
   return (
     <div>
-      <Notification>
+      <Message warning>
         Just a work in progress.
-      </Notification>
+      </Message>
       <CreateForm />
     </div>
   );

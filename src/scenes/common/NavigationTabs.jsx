@@ -2,27 +2,27 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-import { Tabs, Tab, TabList, Icon } from 'bloomer';
+import { Menu, Icon } from 'semantic-ui-react';
 
-const tabs = [
+const menu = [
   {
     name: 'Create',
-    icon: 'fa-plus-square',
+    icon: 'file outline',
     to: '/create',
   },
   {
     name: 'Describe',
-    icon: 'fa-edit',
+    icon: 'edit',
     to: '/describe',
   },
   {
     name: 'Evaluate',
-    icon: 'fa-trophy',
+    icon: 'trophy',
     to: '/evaluate',
   },
   {
     name: 'Finish',
-    icon: 'fa-flag-checkered',
+    icon: 'flag checkered',
     to: '/finish',
   },
 ];
@@ -31,21 +31,19 @@ function NavigationTabs(props) {
   const { location } = props;
   const { pathname } = location;
 
-  const tabComponents = _.map(tabs, tab => (
-    <Tab key={`NavigationTabs${tab.name}`} isActive={pathname.includes(tab.to)}>
-      <Link to={tab.to}>
-        <Icon isSize="medium" className={`fas ${tab.icon}`} />
-        <span>{tab.name}</span>
-      </Link>
-    </Tab>
+  const menuComponents = _.map(menu, m => (
+    <Menu.Item as={Link} key={`NavigationTabs${m.name}`} active={pathname.includes(m.to)} to={m.to}>
+      <Icon name={m.icon} />
+      {m.name}
+    </Menu.Item>
   ));
 
   return (
-      <Tabs isSize="large">
-        <TabList isAlign="right">
-          {tabComponents}
-        </TabList>
-      </Tabs>
+    <Menu icon="labeled" size="large">
+      <Menu.Menu position="right">
+        {menuComponents}
+      </Menu.Menu>
+    </Menu>
   );
 }
 
